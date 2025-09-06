@@ -68,5 +68,5 @@ EXPOSE 5901
 RUN echo "source /opt/ros/jazzy/setup.bash" >> $HOME/.bashrc
 
 # --- Default CMD to start VNC ---
-CMD ["/bin/bash", "-c", "rm -f /tmp/.X1-lock /tmp/.X1.pid && /opt/TurboVNC/bin/vncserver :1 -geometry ${DISPLAY_WIDTH}x${DISPLAY_HEIGHT} -depth 24 -fg"]
+CMD ["/bin/bash", "-c", "rm -f /tmp/.X1-lock /tmp/.X1.pid /tmp/.X11-unix/X1 && /opt/TurboVNC/bin/vncserver :1 -geometry ${DISPLAY_WIDTH}x${DISPLAY_HEIGHT} -depth 24 -fg"]
 
