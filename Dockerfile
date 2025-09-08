@@ -23,7 +23,7 @@ WORKDIR $HOME
 # --- Locale, essentials, GUI packages, TurboVNC, OpenGL ---
 RUN apt update && apt install -y \
     sudo wget curl gnupg2 lsb-release software-properties-common \
-    locales xfce4 xfce4-terminal x11-apps \
+    locales xfce4 xfce4-terminal x11-apps micro \
     mesa-utils libgl1-mesa-dri libglx-mesa0 libglu1-mesa libegl-mesa0 \
     ca-certificates && \
     locale-gen en_US.UTF-8 && update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && \
