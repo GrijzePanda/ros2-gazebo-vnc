@@ -24,10 +24,10 @@ mkdir -p ~/ros2-gazebo-vnc_data
 
 ```bash
 docker run -d \
-    -p 5901:5901 \
-    -v ~/ros2-gazebo-vnc_data:$HOME \
-    --name ros2-gazebo-vnc-container \
-    ros2-gazebo-vnc
+  -p 5901:5901 \
+  -v ~/ros2-gazebo-vnc_data:/home/ubuntu/shared:z \
+  --name ros2-gazebo-vnc-container \
+  ros2-gazebo-vnc
 ```
 
 ## Connect via VNC
