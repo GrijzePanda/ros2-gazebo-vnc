@@ -43,7 +43,7 @@ RUN apt update && apt install -y \
     > /etc/apt/sources.list.d/gazebo-stable.list && \
     apt update && apt install -y \
     turbovnc virtualgl libjpeg-turbo-official \
-    gz-harmonic && \
+    gz-harmonic libgz-transport14-dev && \
     rm -rf /var/lib/apt/lists/*
 
 # --- Final APT check ---
