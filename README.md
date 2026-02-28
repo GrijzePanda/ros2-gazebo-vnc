@@ -27,7 +27,7 @@ docker run -d \
   -p 5901:5901 \
   -v ~/ros2-gazebo-jetty-vnc_data:/home/ubuntu/shared:z \
   --name ros2-gazebo-jetty-vnc-container \
-  ros2-gazebo-vnc
+  ros2-gazebo-jetty-vnc
 ```
 
 ## Connect via VNC
