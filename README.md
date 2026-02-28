@@ -33,7 +33,7 @@ docker run -d \
 ## Connect via VNC
 
 1. Open your VNC client.
-2. Connect to: `localhost:5901`
+2. Connect to: `<your localip>:5901`
 3. Use the password you set with `VNC_PASSWORD`.
 
 You should see the XFCE desktop environment with ROS 2 Jazzy and Gazebo Jetty ready.

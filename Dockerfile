@@ -1,5 +1,5 @@
-# --- Base image ---
-FROM osrf/ros:jazzy-desktop
+    # --- Base image ---
+FROM osrf/ros:jazzy-ros-desktop
 
 LABEL name="ros2-gazebo-jetty-vnc" \
       description="ROS 2 Jazzy + Gazebo Jetty + TurboVNC desktop with persistent home"
@@ -43,8 +43,8 @@ RUN apt update && apt install -y \
     > /etc/apt/sources.list.d/gazebo-stable.list && \
     apt update && apt install -y \
     turbovnc virtualgl libjpeg-turbo-official \
-    gz-jetty libgz-transport15-dev ros-jazzy-ros-gz ros-jazzy-urdf-tutorial ros-jazzy-rqt-tf-tree ros-jazzy-backward-ros && \
-    rm -rf /var/lib/apt/lists/*
+    gz-jetty ros-jazzy-urdf-tutorial ros-jazzy-rqt-tf-tree ros-jazzy-backward-ros
+    # ros-jazzy-ros-gz installs harmonic
 
 # --- Final APT check ---
 RUN apt update && apt full-upgrade -y && rm -rf /var/lib/apt/lists/*
